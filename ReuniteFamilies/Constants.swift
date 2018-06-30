@@ -10,7 +10,8 @@ import UIKit
 
 
 enum ReuniteStatus: String {
-    case Pending = "pending"
+    case pending = "pending"
+    case unknown = ""
 }
 
 struct Constants {

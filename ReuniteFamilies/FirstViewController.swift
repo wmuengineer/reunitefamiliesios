@@ -15,15 +15,15 @@ class FirstViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        ref = Database.database().reference()
-        ref.child(Constants.Key.Children).childByAutoId().setValue([
-            Constants.Key.OriginCountry: "United States",
-            Constants.Key.BirthDate: Date().formatDate(),
-            Constants.Key.FirstName: "Liam",
-            Constants.Key.LastName: "Jennings",
-            Constants.Key.Location: "Oakland, CA",
-            Constants.Key.AgeMax: 7,
-            Constants.Key.AgeMin: 5,
-            Constants.Key.ReuniteStatus: ReuniteStatus.Pending.rawValue])
+//        ref = Database.database().reference()
+//        ref.child(Constants.Key.Children).childByAutoId().setValue([
+//            Constants.Key.OriginCountry: "United States",
+//            Constants.Key.BirthDate: Date().formatDate(),
+//            Constants.Key.FirstName: "Liam",
+//            Constants.Key.LastName: "Jennings",
+//            Constants.Key.Location: "Oakland, CA",
+//            Constants.Key.AgeMax: 7,
+//            Constants.Key.AgeMin: 5,
+//            Constants.Key.ReuniteStatus: ReuniteStatus.pending.rawValue])
     }
 }

@@ -15,4 +15,10 @@ extension Date {
         formatter.dateFormat = "MM/dd/YYYY"
         return formatter.string(from: self)
     }
+    
+    static func dateFromFormat(_ format: String) -> Date? {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MM/dd/YYYY"
+        return formatter.date(from: format) ?? nil
+    }
 }
