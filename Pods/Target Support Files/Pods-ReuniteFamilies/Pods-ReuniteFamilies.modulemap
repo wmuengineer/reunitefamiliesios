@@ -1,0 +1,6 @@
+framework module Pods_ReuniteFamilies {
+  umbrella header "Pods-ReuniteFamilies-umbrella.h"
+
+  export *
+  module * { export * }
+}
