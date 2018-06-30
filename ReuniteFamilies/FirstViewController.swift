@@ -9,28 +9,21 @@
 import UIKit
 import FirebaseDatabase
 
+
 class FirstViewController: UIViewController {
     var ref: DatabaseReference!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         ref = Database.database().reference()
-        ref.child("children").childByAutoId().setValue([
-            Constants.Keys.OriginCountry: "United States",
-            Constants.Keys.BirthDate: Date().formatDate(),
-            Constants.Keys.FirstName: "Liam",
-            Constants.Keys.LastName: "Jennings",
-            Constants.Keys.Location: "Oakland, CA",
-            Constants.Keys.AgeMax: 7,
-            Constants.Keys.AgeMin: 5,
-            Constants.Keys.ReuniteStatus: ReuniteStatus.Pending.rawValue])
+        ref.child(Constants.Key.Children).childByAutoId().setValue([
+            Constants.Key.OriginCountry: "United States",
+            Constants.Key.BirthDate: Date().formatDate(),
+            Constants.Key.FirstName: "Liam",
+            Constants.Key.LastName: "Jennings",
+            Constants.Key.Location: "Oakland, CA",
+            Constants.Key.AgeMax: 7,
+            Constants.Key.AgeMin: 5,
+            Constants.Key.ReuniteStatus: ReuniteStatus.Pending.rawValue])
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
-

@@ -11,9 +11,10 @@
 		882E308C20E813C1009974F9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 882E308B20E813C1009974F9 /* GoogleService-Info.plist */; };
 		88E7318220E8209B00558E5F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E7318120E8209B00558E5F /* Constants.swift */; };
 		88E7318420E822D500558E5F /* Date+Reunite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E7318320E822D500558E5F /* Date+Reunite.swift */; };
+		88E7318620E83D0100558E5F /* ChildrenBrowserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E7318520E83D0100558E5F /* ChildrenBrowserCell.swift */; };
 		D2FAEB7920E810FE0032F341 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FAEB7820E810FE0032F341 /* AppDelegate.swift */; };
 		D2FAEB7B20E810FE0032F341 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FAEB7A20E810FE0032F341 /* FirstViewController.swift */; };
-		D2FAEB7D20E810FE0032F341 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FAEB7C20E810FE0032F341 /* SecondViewController.swift */; };
+		D2FAEB7D20E810FE0032F341 /* ChildrenBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FAEB7C20E810FE0032F341 /* ChildrenBrowserViewController.swift */; };
 		D2FAEB8020E810FE0032F341 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2FAEB7E20E810FE0032F341 /* Main.storyboard */; };
 		D2FAEB8220E810FE0032F341 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2FAEB8120E810FE0032F341 /* Assets.xcassets */; };
 		D2FAEB8520E810FE0032F341 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2FAEB8320E810FE0032F341 /* LaunchScreen.storyboard */; };
@@ -24,11 +25,12 @@
 		882E308B20E813C1009974F9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		88E7318120E8209B00558E5F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		88E7318320E822D500558E5F /* Date+Reunite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Reunite.swift"; sourceTree = "<group>"; };
+		88E7318520E83D0100558E5F /* ChildrenBrowserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildrenBrowserCell.swift; sourceTree = "<group>"; };
 		AB8593F9BEA2FC5F8BDF8574 /* Pods-ReuniteFamilies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReuniteFamilies.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReuniteFamilies/Pods-ReuniteFamilies.release.xcconfig"; sourceTree = "<group>"; };
 		D2FAEB7520E810FE0032F341 /* ReuniteFamilies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReuniteFamilies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2FAEB7820E810FE0032F341 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2FAEB7A20E810FE0032F341 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		D2FAEB7C20E810FE0032F341 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		D2FAEB7C20E810FE0032F341 /* ChildrenBrowserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildrenBrowserViewController.swift; sourceTree = "<group>"; };
 		D2FAEB7F20E810FE0032F341 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D2FAEB8120E810FE0032F341 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D2FAEB8420E810FE0032F341 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -90,7 +92,8 @@
 				D2FAEB7A20E810FE0032F341 /* FirstViewController.swift */,
 				88E7318320E822D500558E5F /* Date+Reunite.swift */,
 				88E7318120E8209B00558E5F /* Constants.swift */,
-				D2FAEB7C20E810FE0032F341 /* SecondViewController.swift */,
+				D2FAEB7C20E810FE0032F341 /* ChildrenBrowserViewController.swift */,
+				88E7318520E83D0100558E5F /* ChildrenBrowserCell.swift */,
 				D2FAEB7E20E810FE0032F341 /* Main.storyboard */,
 				D2FAEB8120E810FE0032F341 /* Assets.xcassets */,
 				D2FAEB8320E810FE0032F341 /* LaunchScreen.storyboard */,
@@ -218,11 +221,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2FAEB7D20E810FE0032F341 /* SecondViewController.swift in Sources */,
+				D2FAEB7D20E810FE0032F341 /* ChildrenBrowserViewController.swift in Sources */,
 				D2FAEB7920E810FE0032F341 /* AppDelegate.swift in Sources */,
 				88E7318420E822D500558E5F /* Date+Reunite.swift in Sources */,
 				D2FAEB7B20E810FE0032F341 /* FirstViewController.swift in Sources */,
 				88E7318220E8209B00558E5F /* Constants.swift in Sources */,
+				88E7318620E83D0100558E5F /* ChildrenBrowserCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

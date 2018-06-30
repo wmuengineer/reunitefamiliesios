@@ -15,7 +15,8 @@ enum ReuniteStatus: String {
 
 struct Constants {
     
-    struct Keys {
+    struct Key {
+        static let Children = "children"
         static let OriginCountry = "country_of_origin"
         static let BirthDate = "dob"
         static let FirstName = "firstname"
