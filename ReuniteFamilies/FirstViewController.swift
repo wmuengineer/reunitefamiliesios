@@ -7,12 +7,23 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class FirstViewController: UIViewController {
-
+    var ref: DatabaseReference!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        ref = Database.database().reference()
+        ref.child("children").childByAutoId().setValue([
+            Constants.Keys.OriginCountry: "United States",
+            Constants.Keys.BirthDate: Date().formatDate(),
+            Constants.Keys.FirstName: "Liam",
+            Constants.Keys.LastName: "Jennings",
+            Constants.Keys.Location: "Oakland, CA",
+            Constants.Keys.AgeMax: 7,
+            Constants.Keys.AgeMin: 5,
+            Constants.Keys.ReuniteStatus: ReuniteStatus.Pending.rawValue])
     }
 
     override func didReceiveMemoryWarning() {

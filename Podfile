@@ -7,4 +7,5 @@ target 'ReuniteFamilies' do
 
   # Pods for ReuniteFamilies
   pod 'Firebase/Core'
+  pod 'Firebase/Database'
 end

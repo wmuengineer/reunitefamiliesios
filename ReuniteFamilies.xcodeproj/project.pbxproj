@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		4C1C61072EAD0DC01645DB9E /* Pods_ReuniteFamilies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36FE07321C7CA23B697191D2 /* Pods_ReuniteFamilies.framework */; };
+		882E308C20E813C1009974F9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 882E308B20E813C1009974F9 /* GoogleService-Info.plist */; };
+		88E7318220E8209B00558E5F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E7318120E8209B00558E5F /* Constants.swift */; };
+		88E7318420E822D500558E5F /* Date+Reunite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E7318320E822D500558E5F /* Date+Reunite.swift */; };
 		D2FAEB7920E810FE0032F341 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FAEB7820E810FE0032F341 /* AppDelegate.swift */; };
 		D2FAEB7B20E810FE0032F341 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FAEB7A20E810FE0032F341 /* FirstViewController.swift */; };
 		D2FAEB7D20E810FE0032F341 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FAEB7C20E810FE0032F341 /* SecondViewController.swift */; };
@@ -18,6 +21,9 @@
 
 /* Begin PBXFileReference section */
 		36FE07321C7CA23B697191D2 /* Pods_ReuniteFamilies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReuniteFamilies.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		882E308B20E813C1009974F9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		88E7318120E8209B00558E5F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		88E7318320E822D500558E5F /* Date+Reunite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Reunite.swift"; sourceTree = "<group>"; };
 		AB8593F9BEA2FC5F8BDF8574 /* Pods-ReuniteFamilies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReuniteFamilies.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReuniteFamilies/Pods-ReuniteFamilies.release.xcconfig"; sourceTree = "<group>"; };
 		D2FAEB7520E810FE0032F341 /* ReuniteFamilies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReuniteFamilies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2FAEB7820E810FE0032F341 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -82,11 +88,14 @@
 			children = (
 				D2FAEB7820E810FE0032F341 /* AppDelegate.swift */,
 				D2FAEB7A20E810FE0032F341 /* FirstViewController.swift */,
+				88E7318320E822D500558E5F /* Date+Reunite.swift */,
+				88E7318120E8209B00558E5F /* Constants.swift */,
 				D2FAEB7C20E810FE0032F341 /* SecondViewController.swift */,
 				D2FAEB7E20E810FE0032F341 /* Main.storyboard */,
 				D2FAEB8120E810FE0032F341 /* Assets.xcassets */,
 				D2FAEB8320E810FE0032F341 /* LaunchScreen.storyboard */,
 				D2FAEB8620E810FE0032F341 /* Info.plist */,
+				882E308B20E813C1009974F9 /* GoogleService-Info.plist */,
 			);
 			path = ReuniteFamilies;
 			sourceTree = "<group>";
@@ -153,6 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2FAEB8520E810FE0032F341 /* LaunchScreen.storyboard in Resources */,
+				882E308C20E813C1009974F9 /* GoogleService-Info.plist in Resources */,
 				D2FAEB8220E810FE0032F341 /* Assets.xcassets in Resources */,
 				D2FAEB8020E810FE0032F341 /* Main.storyboard in Resources */,
 			);
@@ -187,11 +197,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ReuniteFamilies/Pods-ReuniteFamilies-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -208,7 +220,9 @@
 			files = (
 				D2FAEB7D20E810FE0032F341 /* SecondViewController.swift in Sources */,
 				D2FAEB7920E810FE0032F341 /* AppDelegate.swift in Sources */,
+				88E7318420E822D500558E5F /* Date+Reunite.swift in Sources */,
 				D2FAEB7B20E810FE0032F341 /* FirstViewController.swift in Sources */,
+				88E7318220E8209B00558E5F /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,7 +361,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = AQ3XSR79XW;
+				DEVELOPMENT_TEAM = 628BLV65XC;
 				INFOPLIST_FILE = ReuniteFamilies/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.scottobot.ReuniteFamilies;
@@ -363,7 +377,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = AQ3XSR79XW;
+				DEVELOPMENT_TEAM = 628BLV65XC;
 				INFOPLIST_FILE = ReuniteFamilies/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.scottobot.ReuniteFamilies;
