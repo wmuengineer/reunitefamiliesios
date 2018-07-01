@@ -9,7 +9,10 @@
 import UIKit
 
 class ChildrenBrowserCell: UITableViewCell {
-
+    
+    @IBOutlet weak var leftLabel: UILabel!
+    @IBOutlet weak var rightLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -38,7 +41,7 @@ class ChildrenBrowserCell: UITableViewCell {
         if let age = age {
             leftAtt.append(NSAttributedString(string: "Age: \(age)\n", attributes: otherAttributes))
         }
-        textLabel?.attributedText = leftAtt
+        leftLabel?.attributedText = leftAtt
         
         let rightAtt = NSMutableAttributedString()
         if let country = info.country {
@@ -50,7 +53,7 @@ class ChildrenBrowserCell: UITableViewCell {
         if let reuniteStatus = info.reuniteStatus {
             rightAtt.append(NSAttributedString(string: "Status: \(reuniteStatus.rawValue.capitalized)\n" , attributes: otherAttributes))
         }
-        detailTextLabel?.attributedText = rightAtt
+        rightLabel?.attributedText = rightAtt
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -58,5 +61,4 @@ class ChildrenBrowserCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
 }

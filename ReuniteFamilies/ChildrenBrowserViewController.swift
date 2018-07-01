@@ -22,6 +22,9 @@ class ChildrenBrowserViewController: UIViewController {
         
         let ref = Database.database().reference()
         let query = ref.child(Constants.Key.Children).queryOrdered(byChild: Constants.Key.LastName)
+        
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 44
 
         query.observeSingleEvent(of: .value, with: { snapshot in
             let enumerator = snapshot.children
