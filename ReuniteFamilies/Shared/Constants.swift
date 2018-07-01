@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 enum ReuniteStatus: String {
     case Pending = "pending"
 }
@@ -18,13 +17,12 @@ struct Constants {
     struct Keys {
         static let OriginCountry = "country_of_origin"
         static let BirthDate = "dob"
-        static let FirstName = "firstname"
-        static let LastName = "lastname"
+        static let FirstName = "first_name"
+        static let LastName = "last_name"
         static let Location = "location"
-        static let AgeMax = "max_age"
-        static let AgeMin = "min_age"
+        static let Age = "age"
         static let ReuniteStatus = "reunite_status"
+        static let Gender = "gender"
     }
-    
 
 }

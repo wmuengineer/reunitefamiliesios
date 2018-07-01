@@ -11,6 +11,10 @@
 		882E308C20E813C1009974F9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 882E308B20E813C1009974F9 /* GoogleService-Info.plist */; };
 		88E7318220E8209B00558E5F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E7318120E8209B00558E5F /* Constants.swift */; };
 		88E7318420E822D500558E5F /* Date+Reunite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E7318320E822D500558E5F /* Date+Reunite.swift */; };
+		D20C3E4020E8280E0073B90C /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20C3E3F20E8280E0073B90C /* Strings.swift */; };
+		D20C3E4220E82DAC0073B90C /* UploadChildForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20C3E4120E82DAC0073B90C /* UploadChildForm.swift */; };
+		D20C3E4620E836C90073B90C /* RFService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20C3E4520E836C90073B90C /* RFService.swift */; };
+		D20C3E4920E837A50073B90C /* Child.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20C3E4820E837A50073B90C /* Child.swift */; };
 		D2FAEB7920E810FE0032F341 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FAEB7820E810FE0032F341 /* AppDelegate.swift */; };
 		D2FAEB7B20E810FE0032F341 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FAEB7A20E810FE0032F341 /* FirstViewController.swift */; };
 		D2FAEB7D20E810FE0032F341 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FAEB7C20E810FE0032F341 /* SecondViewController.swift */; };
@@ -25,6 +29,10 @@
 		88E7318120E8209B00558E5F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		88E7318320E822D500558E5F /* Date+Reunite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Reunite.swift"; sourceTree = "<group>"; };
 		AB8593F9BEA2FC5F8BDF8574 /* Pods-ReuniteFamilies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReuniteFamilies.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReuniteFamilies/Pods-ReuniteFamilies.release.xcconfig"; sourceTree = "<group>"; };
+		D20C3E3F20E8280E0073B90C /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		D20C3E4120E82DAC0073B90C /* UploadChildForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadChildForm.swift; sourceTree = "<group>"; };
+		D20C3E4520E836C90073B90C /* RFService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RFService.swift; sourceTree = "<group>"; };
+		D20C3E4820E837A50073B90C /* Child.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Child.swift; sourceTree = "<group>"; };
 		D2FAEB7520E810FE0032F341 /* ReuniteFamilies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReuniteFamilies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2FAEB7820E810FE0032F341 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2FAEB7A20E810FE0032F341 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +73,41 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		D20C3E3B20E820D20073B90C /* UploadChild */ = {
+			isa = PBXGroup;
+			children = (
+				D20C3E4120E82DAC0073B90C /* UploadChildForm.swift */,
+			);
+			path = UploadChild;
+			sourceTree = "<group>";
+		};
+		D20C3E3E20E827F80073B90C /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				D20C3E3F20E8280E0073B90C /* Strings.swift */,
+				88E7318120E8209B00558E5F /* Constants.swift */,
+				88E7318320E822D500558E5F /* Date+Reunite.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		D20C3E4420E8367B0073B90C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D20C3E4720E836D00073B90C /* Database */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		D20C3E4720E836D00073B90C /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				D20C3E4520E836C90073B90C /* RFService.swift */,
+				D20C3E4820E837A50073B90C /* Child.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
 		D2FAEB6C20E810FE0032F341 = {
 			isa = PBXGroup;
 			children = (
@@ -86,10 +129,11 @@
 		D2FAEB7720E810FE0032F341 /* ReuniteFamilies */ = {
 			isa = PBXGroup;
 			children = (
+				D20C3E3E20E827F80073B90C /* Shared */,
+				D20C3E4420E8367B0073B90C /* Services */,
+				D20C3E3B20E820D20073B90C /* UploadChild */,
 				D2FAEB7820E810FE0032F341 /* AppDelegate.swift */,
 				D2FAEB7A20E810FE0032F341 /* FirstViewController.swift */,
-				88E7318320E822D500558E5F /* Date+Reunite.swift */,
-				88E7318120E8209B00558E5F /* Constants.swift */,
 				D2FAEB7C20E810FE0032F341 /* SecondViewController.swift */,
 				D2FAEB7E20E810FE0032F341 /* Main.storyboard */,
 				D2FAEB8120E810FE0032F341 /* Assets.xcassets */,
@@ -196,12 +240,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ReuniteFamilies/Pods-ReuniteFamilies-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Eureka.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -219,10 +265,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2FAEB7D20E810FE0032F341 /* SecondViewController.swift in Sources */,
+				D20C3E4020E8280E0073B90C /* Strings.swift in Sources */,
 				D2FAEB7920E810FE0032F341 /* AppDelegate.swift in Sources */,
 				88E7318420E822D500558E5F /* Date+Reunite.swift in Sources */,
+				D20C3E4220E82DAC0073B90C /* UploadChildForm.swift in Sources */,
 				D2FAEB7B20E810FE0032F341 /* FirstViewController.swift in Sources */,
+				D20C3E4620E836C90073B90C /* RFService.swift in Sources */,
 				88E7318220E8209B00558E5F /* Constants.swift in Sources */,
+				D20C3E4920E837A50073B90C /* Child.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
