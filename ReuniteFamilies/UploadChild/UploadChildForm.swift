@@ -16,31 +16,31 @@ class UploadChildForm: FormViewController {
         title = Strings.UploadChild
         
         form +++ Section("Child Info")
-            <<< TextRow(Constants.Keys.FirstName) { row in
+            <<< TextRow(Constants.Key.FirstName) { row in
                 row.title = "First Name"
                 row.add(rule: RuleRequired(msg: "Enter \(row.title!)", id: nil))
             }
-            <<< TextRow(Constants.Keys.LastName) { row in
+            <<< TextRow(Constants.Key.LastName) { row in
                 row.title = "Last Name"
             }
-            <<< SegmentedRow<String>(Constants.Keys.Gender) { row in
+            <<< SegmentedRow<String>(Constants.Key.Gender) { row in
                 row.title = "Gender"
                 row.options = ["Male", "Female"]
                 row.add(rule: RuleRequired(msg: "Enter \(row.title!)", id: nil))
             }
-            <<< DateRow(Constants.Keys.BirthDate) { row in
+            <<< DateRow(Constants.Key.BirthDate) { row in
                 row.title = "Birthdate (if known)"
             }
-            <<< IntRow(Constants.Keys.Age) { row in
+            <<< IntRow(Constants.Key.Age) { row in
                 row.title = "Estimated Age"
                 row.add(rule: RuleRequired(msg: "Enter \(row.title!)", id: nil))
             }
-            <<< TextRow(Constants.Keys.OriginCountry) { row in
+            <<< TextRow(Constants.Key.OriginCountry) { row in
                 row.title = "Country of Origin"
             }
             
         +++ Section("Location Info")
-            <<< TextRow(Constants.Keys.Location) { row in
+            <<< TextRow(Constants.Key.Location) { row in
                 row.title = "Facility Location"
                 row.add(rule: RuleRequired(msg: "Enter \(row.title!)", id: nil))
             }
@@ -68,18 +68,17 @@ class UploadChildForm: FormViewController {
         }
         
         let values = form.values()
-        let child = Child(
-            firstName: values[Constants.Keys.FirstName] as? String,
-            lastName: values[Constants.Keys.LastName] as? String,
-            gender: values[Constants.Keys.Gender] as? String,
-            birthdate: values[Constants.Keys.BirthDate] as? Date,
-            age: values[Constants.Keys.Age] as? Int,
-            countryOfOrigin: values[Constants.Keys.OriginCountry] as? String,
-            location: values[Constants.Keys.Location] as? String,
-            reuiniteStatus: .Pending
+        RFService.shared.saveChild(
+            firstName: values[Constants.Key.FirstName] as? String,
+            lastName: values[Constants.Key.LastName] as? String,
+            gender: values[Constants.Key.Gender] as? String,
+            birthDate: values[Constants.Key.BirthDate] as? Date,
+            age: values[Constants.Key.Age] as? Int,
+            countryOfOrigin: values[Constants.Key.OriginCountry] as? String,
+            location: values[Constants.Key.Location] as? String,
+            reuniteStatus: .pending
         )
-        
-        RFService.shared.saveChild(child: child) { [weak self] error in
+        { [weak self] error in
             guard let strongSelf = self else { return }
             if error == nil {
                 strongSelf.showAlert(Strings.SaveSuccess) {
